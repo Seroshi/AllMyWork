@@ -26,8 +26,6 @@ float speed;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
-	//All the things for the game
 	lives = 10;
 	score = 0;
 	counterCircle = 0;
@@ -52,14 +50,51 @@ void ofApp::setup(){
 	rectangleX = ofRandom(ofGetWidth());
 	rectangleY = ofRandom(ofGetHeight());
 
+	face.loadImage("face.png");
+
 	ofEnableSmoothing();
+	/*
+	speed = 5;
+	playerRadius = 60;
+	enemyRadius = 20;
+	//show enemy at the top position
+	enemyY = 0-enemyRadius;
+	enemyX = ofRandom(ofGetWidth());
+	hasLostGame = false;
+	score = 0;
+	ofSetVerticalSync(true);
+	*/
+}
+void ofApp::updateArduino(){
+	//a call to update the arduino data ins and out
+	myArduino.update();
+}
+//This will setup all of my Arduino pins
+void ofApp::setupArduino(){
+	myArduino.sendDigitalPinMode(9,ARD_OUTPUT);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	
+	/*
+	//if Arduino is ready
+	if(myArduino.isArduinoReady()){
+		//1st setup the arduino if haven't already
+		if(bSetupArduino == false){
+			//cout << "Arduino running" << endl;
+			//This function assign the pins
+			setupArduino();
+			//we're starting running arduino so no need to call setup again!
+			bSetupArduino = true;//only do this once
+		}
+		//2nd do the update of the Arduino
+		updateArduino();
+	}
+	*/
 	//When ur not dead do this
 	if(hasLostGame == false){
+		//Turn the 9th pin on the arduino on. For this code LED is ON.
+		myArduino.sendDigital(9, ARD_HIGH);
 
 		//Show circle after a specific time
 		if(counterCircle > 9990){
@@ -175,10 +210,12 @@ void ofApp::draw(){
 	}
 	//Show & draw a rectangle
 	if(RectangleVisible){
-		ofRect(rectangleX,rectangleY, 100, 100);
+		//ofRect(rectangleX,rectangleY, 100, 100);
+		face.draw(100,100);
 	}
 	if(hasLostGame){
 		ofDrawBitmapString("\n Game Over! Press SPACEBAR to restart", 320,300);
+		myArduino.sendDigital(9, ARD_LOW);
 	}
 }
 
