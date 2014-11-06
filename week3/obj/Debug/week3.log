@@ -1,0 +1,36 @@
+﻿  ofApp.cpp
+c:\users\kensuke\desktop\ofw\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(126): warning C4250: 'Poco::InputStreamConverter' : inherits 'std::basic_istream<_Elem,_Traits>::std::basic_istream<_Elem,_Traits>::_Add_vtordisp1' via dominance
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>
+          ]
+          c:\program files\microsoft visual studio 11.0\vc\include\istream(74) : see declaration of 'std::basic_istream<_Elem,_Traits>::_Add_vtordisp1'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>
+          ]
+c:\users\kensuke\desktop\ofw\of_v0.8.4_vs_release\libs\poco\include\poco\streamconverter.h(144): warning C4250: 'Poco::OutputStreamConverter' : inherits 'std::basic_ostream<_Elem,_Traits>::std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2' via dominance
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>
+          ]
+          c:\program files\microsoft visual studio 11.0\vc\include\ostream(90) : see declaration of 'std::basic_ostream<_Elem,_Traits>::_Add_vtordisp2'
+          with
+          [
+              _Elem=char,
+              _Traits=std::char_traits<char>
+          ]
+  week3.vcxproj -> C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\bin\week3_debug.exe
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\Assimp32.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\fmodex.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\fmodexL.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\FreeImage.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\FreeType-6.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\glut32.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\libeay32.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\ssleay32.dll
+  C:\Users\Kensuke\Desktop\OFW\of_v0.8.4_vs_release\apps\myApps\week3\..\..\..\export\vs\Zlib.dll
+  9 bestand(en) gekopieerd
