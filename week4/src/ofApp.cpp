@@ -27,7 +27,7 @@ void ofApp::setup(){
 	answer2.push_back("..."); //answer2-4
 	answer2.push_back("..."); //answer2-5
 
-	checker.push_back(""); //checker1
+	checker.push_back("..."); //checker1
 	checker.push_back(""); //checker2
 	checker.push_back(""); //checker3
 	checker.push_back(""); //checker4
@@ -49,25 +49,42 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	if(answer[0] == answer2[0]){
-		checker[0] = "correct";
-	}
-	if(answer[1] == answer2[1]){
-		checker[1] = "correct";
-	}
-	if(answer[2] == answer2[2]){
-		checker[2] = "correct";
-	}
-	if(answer[3] == answer2[3]){
-		checker[3] = "correct";
-	}
-	if(answer[4] == answer2[4]){
-		checker[4] = "correct";
-	}
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	if(answer[0] == answer2[0]){
+		checker[0] = "correct";
+	}
+	else{
+		checker[0] = "";
+	}
+	if(answer[1] == answer2[1]){
+		checker[1] = "correct";
+	}
+	else{
+		checker[1] = "";
+	}
+	if(answer[2] == answer2[2]){
+		checker[2] = "correct";
+	}
+	else{
+		checker[2] = "";
+	}
+	if(answer[3] == answer2[3]){
+		checker[3] = "correct";
+	}
+	else{
+		checker[3] = "";
+	}
+	if(answer[4] == answer2[4]){
+		checker[4] = "correct";
+	}
+	else{
+		checker[4] = "";
+	}
+
 	//making all the answer1 textfields
 	ofSetColor(60,60,60);
 	ofRect(textfieldX, textfieldY, textfieldWidth, textfieldHeight);
@@ -120,17 +137,20 @@ void ofApp::draw(){
 	ofDrawBitmapString(hint5, 440, 460);
 
 	//making the buttons 
-	ofSetColor(180, 180, 180);
-	ofRect(buttonX, buttonY, buttonWidth, buttonHeight);
-	ofSetColor(0,0,0);
-	ofDrawBitmapString("Player 1", 120, 520);
+	if(showAnswers){
+		ofSetColor(180, 180, 180);
+		ofRect(buttonX, buttonY, buttonWidth, buttonHeight);
+		ofSetColor(0,0,0);
+		ofDrawBitmapString("Player 2", 120, 520);
+	}
 	//making the text of the buttons
-	ofSetColor(150, 150, 150);
-	ofRect(buttonX+170, buttonY, buttonWidth, buttonHeight);
-	ofSetColor(0,0,0);
-	ofDrawBitmapString("Player 2", 290, 520);
+	if(!showAnswers){ofSetColor(150, 150, 150);
+		ofRect(buttonX+170, buttonY, buttonWidth, buttonHeight);
+		ofSetColor(0,0,0);
+		ofDrawBitmapString("Player 1", 290, 520);
+	}
 
-	//making all the "correct" text
+	//making all the checker text
 	ofSetColor(0,100,0);
 	ofDrawBitmapString(checker[0], 860, 260);
 	ofDrawBitmapString(checker[1], 860, 310);
@@ -342,7 +362,6 @@ void ofApp::mouseReleased(int x, int y, int button){
 		//answer textfield 1
 		if(mouseX >= textfieldX && mouseX <= textfieldX+textfieldWidth && mouseY >= textfieldY && mouseY <= textfieldY+textfieldHeight){
 			CheckOn = true;
-			cout << "Work!" << endl;
 		}
 		else{
 			CheckOn = false;

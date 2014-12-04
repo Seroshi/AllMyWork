@@ -1,0 +1,23 @@
+Author:	Steven Yap
+Game: 	Bombs survival
+
+So for this game my only objective is creating the experience of tension and fun. 
+To achieve this I used the following ways:
+
+1. By using bombs in my concept it will already give the player a certain tenstion, because everyone 
+knows bombs will eventually explode. Trying to survive the bombs is what makes the ultimate tension.
+
+
+2. By speeding up the falling bombs and the time it will explode, this will keep adding tension until
+the player totally panics. THis panic is what will make this game a challenge and fun to play.
+
+3. To diffuse the bombs you need to push the right keybutton. The bombs however will pulsate faster and 
+faster when they touch the ground, trying to confuse your eyevision so that you will make a mistake. 
+Trying to train your memmory and keeping focus adds even more tension and playfullness to the experience.
+
+4. THe direction of the bombs and which bomb is falling are random, making it impossible to guess what comes 
+next and where it will come. This creates alot more confusion which is needed for the right tension and enjoyment.
+
+5. All the points made above will get harder and harder when you're making progress in the game. Players
+off course won't notice it directly, but eventually when you do...it's too late. You won't have time
+to stay calm and have to try harder and harder to stay alive.
